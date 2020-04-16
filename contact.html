@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT-PIZZA FLAKE</title>
+    <link href="css/bootstrap-grid.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body id="contact">
     <header>
         <div class="main">
             <div class="logo">
                 <h3>CONTACT.PIZZA FLAKE</h3>
             </div>
         <ul>
-            <li class="active">
-                <a href="home.html">Home</a>
+            <li>
+                <a href="index.html">Home</a>
             </li>
             <li>
                 <a href="about.html">About Us</a>
@@ -21,12 +23,44 @@
             <li>
                 <a href="menu.html">Menu</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="contact.html">Contact</a>
             </li>
         </ul>
     </header>
+    <div id="contactus">
+        <div class="contact-overlay">
+            <div class="contactus">
+            <h4><b><br>CONTACT US</b></h4>
+            </div>
+            <form action="https://formspree.io/xdolvedw" method="POST">
+                <input type="text" id="fullname" name="fullname" placeholder="Name..">
+                <input type="text" id="email" name="email" placeholder="Email..">
+                <textarea id="message" name="message" placeholder="Your message here.." style="height:200px"></textarea>
+                <input type="submit" value="SEND" id="SUBMIT">
+              </form>
+        </div>
+    </div>
+       <div class="socials">
+         <a href="https://www.twitter.com">
+         <img src="assets/socials/twitter1.png" alt="twitter logo">
+         </a>
+         <a href="https://www.facebook.com">
+         <img src="assets/socials/fb3.png" alt="facebook logo">
+         </a>
+         <a href="https://www.google.com">
+         <img src="assets/socials/g_plus4.png" alt="google logo">
+         </a>
+         <a href="https://www.youtube.com">
+         <img src="assets/socials/youtube10.png" alt="youtube logo">
+         </a>
+      </div>
 
+      <div class="footer">
+        <p>PIZZA FLAKE<br>
+           2020.
+        </p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="js/pizza.js"></script>
 </body>

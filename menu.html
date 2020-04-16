@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MENU-PIZZA FLAKE</title>
+    <link href="css/bootstrap-grid.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body id="menu">
     <header>
         <div class="main">
             <div class="logo">
                 <h3>MENU.PIZZA FLAKE</h3>
             </div>
         <ul>
-            <li class="active">
-                <a href="home.html">Home</a>
+            <li>
+                <a href="index.html">Home</a>
             </li>
             <li>
                 <a href="about.html">About Us</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="menu.html">Menu</a>
             </li>
             <li>
@@ -29,13 +31,85 @@
 
     <div class="container">
         <h2>MENU</h2>
-        <form class="menu" action="" method="post" id="menu1">
+        <form class="menu" action="" method="post" id="menu1"><br><br>
+
+            <div class="row">
+                <div class="col-sm-3 color">
+                    <label>SIZE</label>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="size" required>
+                        <option value="small">Small @ 300Ksh</option>
+                        <option value="medium">Medium @500ksh</option>
+                        <option value="large">Large @ 800ksh</option>
+                    </select>
+                    <span class="invalid" id="size-invalid"></span>
+                </div>
+            </div><br><br>
             
-           <div class="row">
-               <div class="col-sm-3 color">
-                   <label>SIZE</label>
-               </div>
-               <div class="col-sm-3">
+            <div class="row">
+                <div class="col-sm-3 color">
+                    <label>CRUST</label>
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="crust" required>
+                        <option value="crispy" id="crispy">Crispy @100ksh</option>
+                        <option value="stuffed" id="stuffed">Stuffed @ 200ksh</option>
+                        <option value="glutten-free" id="glutten-free">Glutten-free @ 300ksh</option>
+                        <option value="flat bread" id="flat-bread">Flat Bread @ Ksh 300</option>
+                    </select>
+                    <span class="invalid" id="invalidcrust"></span>
+                </div>
+            </div><br><br>
+
+       
+
+            <div class="row">
+                <div class="col-sm-3 color">
+                    <label>TOPPINGS</label>
+                    <ul>
+                        <li>For Large @100</li>
+                        <li>For Medium @80</li>
+                        <li>For Small @50</li>
+                    </ul>
+                </div>
+                 <label class="container">Pepperoni
+                     <input type="checkbox" checked="checked">
+                     <span class="checkmark"></span>
+                 </label>
+                 <label class="container">Bacon
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Onions
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Pineapples
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="row">
+                    <div class="col-sm-3 color">
+                        <label>QUANTITY</label>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="number" name="quantity" value="1" class="form-control" min="1" max="100" placeholder="max=100">
+                        <button type="submit" class="btn btn-danger button floater proceed">Proceed</button>
+                        <span id="invalid1"></span>
+                        <hr class="line1">
+
+                        <div id="info">
+                            <p>We will deliver to you as soon as possible.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
 
                </div>
            </div>

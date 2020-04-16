@@ -1,12 +1,9 @@
-body {
-    background-image: url(pix4.jpg);
-}
  * {
       margin:0%;
       font-family: sans-serif;
       padding: 0%;
   }
-  header {
+  #index header {
       background-image: url(../pix4.jpg);
       background-size: cover;
       height:100vh;
@@ -70,9 +67,140 @@ body {
      max-width:1200px;
      margin:auto;
  }
- .about {
+ #aboutus .about {
      text-align: center;
-     margin-top:3cm;
-     color: red;
+     margin-top: 50%;
+     color: whitesmoke;
  }
- 
+ #aboutus {
+      background-image: url(../pizza.jpg);
+      background-size: cover;
+      height:100vh;
+      background-position: center;
+ }
+ #aboutus #about {
+      text-align: center;
+      font-size:15mm;
+      font-weight: bolder;
+ }
+ #aboutus .paragraph {
+     text-align: center;
+     font-weight: bold;
+     font-style: oblique;
+     color: whitesmoke;
+     font-size: 7mm;
+     color: green;
+ }
+ #aboutus #enjoy {
+     color: tomato;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 10mm;
+ }
+ #menu {
+     background-color:grey;
+ }
+ #contact {
+    background-image: url(../pix3.webp);
+      background-size: cover;
+      height:100vh;
+      background-position: center;
+ }
+ #contact #fullname {
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-size: x-large;
+    background: transparent;
+  }
+ #contact #email {
+    position: absolute;
+    top: 22%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-size: x-large;
+    background: transparent;
+  }
+  #contact #message {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-size: x-large;
+    background: transparent;
+  }
+  #contact #SUBMIT {
+    position: absolute;
+    top: 63%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-size: x-large;
+  }
+ #contact .socials {
+     position: absolute;
+     top: 70%;
+     bottom: 20%;
+     left: 40%;
+     text-align: center;
+ }
+ #contact .footer {
+     text-align: center;
+     color: red;
+     font-weight: bold;
+     font-family: sans-serif;
+     bottom: 15%;
+     font-size: 9mm;
+     left: 40%;
+     position: absolute;
+ }
+ #contact .contactus {
+     position: absolute;
+     text-align: center;
+     top: 10%;
+     left: 40%;
+     color: whitesmoke;
+     font-family: sans-serif;
+     font-weight: bold;
+     font-size: 10mm;
+ }
+ #contact .logo {
+    float:left;
+    width:150px;
+    height:auto;
+    font-size: 4mm;
+    font-weight: bolder;
+    color: red;
+ }
+  #contact  ul li.active a {
+        background-color: #fff;
+        color:#000;
+  }
+  #aboutus  ul li.active a {
+    background-color: #fff;
+    color:#000;
+}
+#aboutus .logo {
+    float:left;
+    width:150px;
+    height:auto;
+    font-size: 4mm;
+    font-weight: bolder;
+    color: red;
+ }
+ #menu  ul li.active a {
+    background-color: #fff;
+    color:#000;
+}
+#menu .logo {
+    float:left;
+    width:150px;
+    height:auto;
+    font-size: 4mm;
+    font-weight: bolder;
+    color: red;
+ }
