@@ -43,35 +43,40 @@
   </div>
   
     <div class="container">
-        <h2>MENU</h2>
+        <h2 class="menu">MENU</h2>
         <form class="menu" action="" method="post" id="menu1"><br><br>
 
             <div class="row">
                 <div class="col-sm-3 color">
-                    <label>SIZE</label>
+                    <label class="titlesize">SIZE</label>
                 </div>
                 <div class="col-sm-3">
+                    <div class="size">
                     <select class="form-control" name="size" required>
+                        <option value="---">---</option>
                         <option value="small">Small @ 300Ksh</option>
                         <option value="medium">Medium @500ksh</option>
                         <option value="large">Large @ 800ksh</option>
                     </select>
                     <span class="invalid" id="size-invalid"></span>
+                    </div>
                 </div>
             </div><br><br>
             
             <div class="row">
                 <div class="col-sm-3 color">
-                    <label>CRUST</label>
+                    <label class="crustt">CRUST</label>
                 </div>
                 <div class="col-sm-3">
+                    <div class="crust">
                     <select class="form-control" name="crust" required>
+                        <option value="---" id="null">---</option>
                         <option value="crispy" id="crispy">Crispy @100ksh</option>
                         <option value="stuffed" id="stuffed">Stuffed @ 200ksh</option>
                         <option value="glutten-free" id="glutten-free">Glutten-free @ 300ksh</option>
-                        <option value="flat bread" id="flat-bread">Flat Bread @ Ksh 300</option>
                     </select>
                     <span class="invalid" id="invalidcrust"></span>
+                    </div>
                 </div>
             </div><br><br>
 
@@ -79,13 +84,14 @@
 
             <div class="row">
                 <div class="col-sm-3 color">
-                    <label>TOPPINGS</label>
-                    <ul>
+                    <label class="toppings">TOPPINGS</label>
+                    <ul class="ltoppings">
                         <li>For Large @100</li>
                         <li>For Medium @80</li>
                         <li>For Small @50</li>
                     </ul>
                 </div>
+                <div class="toppingstypes">
                  <label class="container">Pepperoni
                      <input type="checkbox" checked="checked">
                      <span class="checkmark"></span>
@@ -102,15 +108,18 @@
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                 </label>
+                </div>
                 <div class="row">
                     <div class="col-sm-3 color">
+                      <div class="quantity">
                         <label>QUANTITY</label>
                     </div>
                     <div class="col-sm-3">
-                        <input type="number" name="quantity" value="1" class="form-control" min="1" max="100" placeholder="max=100">
-                        <button type="submit" class="btn btn-danger button floater proceed">Proceed</button>
+                        <input type="number" name="quantity" value="1" class="form" min="1" max="100" placeholder="max=100">
+                        <button type="submit" class="button">Proceed</button>
                         <span id="invalid1"></span>
                         <hr class="line1">
+                    </div>
 
                         <div id="info">
                             <p>We will deliver to you as soon as possible.</p>
