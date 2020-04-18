@@ -31,7 +31,7 @@
     <div id="container">
      <div class="container">
         <div class="row jumbotron">
-            <h2 class="fooday">EVERYDAY IS FOODAY</h2>
+            <h3 class="fooday">EVERYDAY IS FOODAY</h3>
         </div>
         <div class="intro">
         <p>My guess is you are looking to order for some savoury pizza.</p>
@@ -114,13 +114,55 @@
                       <div class="quantity">
                         <label>QUANTITY</label>
                     </div>
-                    <div class="col-sm-3">
-                        <input type="number" name="quantity" value="1" class="form" min="1" max="100" placeholder="max=100">
-                        <button type="submit" class="button">Proceed</button>
-                        <span id="invalid1"></span>
-                        <hr class="line1">
+
+                    <div class="form">
+                        <label class="delivery">Delivery</label>
+                        <input type="radio" name="selectDelivery" id="yesDelivery" value="yes"/>
+                        <label class="choiceYes">Yes</label>
+                        <input type="radio" name="selectDelivery" id="noDelivery" value="no"/>
+                        <label class="choiceNo">No</label>
                     </div>
 
+                    <div class="deliveryAddressHolder" id="deliveryAddressHolder">
+                       <label class="addressHolder">Enter delivery address:</label>
+                       <input type="text" id="deliveryAddress">
+                    </div>
+                    <div class="pizzaPrice" id="pizzaPrice">
+                        <label class="totalPrice"><b>Total Price</b></label>
+                        <input type="number" id="totalPrice">
+                    </div>
+                    <div class="button">
+                        <button type="submit" onclick="submitData(); return false;" id="submit">ORDER</button>
+                        <button type="checkout" id="checkout">CHECKOUT</span>
+                    </div><br>
+                    <div class="col-md-4"></div>
+                        <div id="fullOrder">
+                            <div id="yourOrders">
+                                <h4 class="tableOrder">Here's your order:</h4>
+                              <table class="table table-sm  pizzatable">
+                                <th>
+                                  <tr class="scope">
+                                    <th scope="col">Size</th>
+                                    <th scope="col">Crust</th>
+                                    <th scope="col">Toppings</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                  </tr>
+                                </th>
+                                <tbody>
+                                    <tr>
+                                      <td id="selectedSizeTd"></td>
+                                      <td id="selectedCrusts"></td>
+                                      <td id="selectedToppings"></td>
+                                      <td id="number"></td>
+                                      <td id="total"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                          </div>
+                     </div>
+                </div>
                         <div id="info">
                             <p>We will deliver to you as soon as possible.</p>
                         </div>
