@@ -1,126 +1,83 @@
-var pizzaStartPrice=300;
-var deliveryPrice=0;
-var deliverySelected=false;
+$(document).ready(function() {
+var toppingsPrices = { Onion: 10, Bacon: 100, Pineapples: 100, Pepperoni: 200 };
+var crustPrices = { crispy: 100, stuffed: 200, glutten_free: 300 };
 
-document.addEventListener('DOMContentLoaded',function() {
-    document.getElementById("submit").addEventListener("click",function(event) {
-        event.preventDefault()
-    })
+$.each(toppingsPrices, function (k, v) {
+    var option = '<option value="' + k + '">' + k + ' @ ' + v + ' Ksh</option>';
+    $("#select-toppings").append(option);
+});
+$.each(crustPrices, function (k, v) {
+    var option = '<option value="' + k + '">' + k + '</option>';
+    $("#select-crust").append(option);
+});
+function Pizza(size, crust, toppings) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
+}
+Pizza.prototype.SizePrice = function () {
+    if (this.size === "large") {
+        return 900;
+    } else if (this.size == "medium") {
+        return 500;
+    } else {
+        return 300;
+    }
+}
+Pizza.prototype.ToppingsPrice = function () {
+    if (this.size == "large") {
+        return toppingsPrices[this.toppings] * 3;
+    } else if (this.size == "medium") {
+        return toppingsPrices[this.toppings] * 2;
+    } else {
+        return toppingsPrices[this.toppings];
+    }
+}
+Pizza.prototype.CrustPrice = function () {
+    if (this.crust == "crispy") {
+        return 100;
+    } else if (this.crust == "stuffed") {
+        return 200;
+    } else {
+        return 300;
+    }
+}
+var pizza1 = new Pizza("large", "crispy", "onion");
+console.log(pizza1.size + " " + pizza1.SizePrice() + " helen " + pizza1.ToppingsPrice() + pizza1.CrustPrice() + 200);
+
+
+$("#btn-add-to-cart").click(function (e) {
+    e.preventDefault();
+    var size = $("select[name='size']").val();
+    var crust = $("select[name='crust']").val();
+    var toppings = $("select[name='toppings']").val();
+    var quantity = $("input[name='quantity']").val();
+    var pizza = new Pizza(size, crust, toppings);
+    var sizePrice = pizza.SizePrice();
+    var crustPrice = pizza.CrustPrice();
+    var toppingPrice = pizza.ToppingsPrice();
+    var deliveryCost = 200;
+    var total = (sizePrice + crustPrice + toppingPrice) * quantity ;
+
+    var orderItem = "<li>" + quantity + " " + size + " " + 'pizza ,' + "  " + crust + " with " + toppings + " toppings <br> Total Ksh ." + total + "</li>";
+
+    $("#list").append(orderItem);
 })
-
-   var pizzaSizes=document.getElementById("sizes");
-   var pizzaCrusts=document.getElementById("crusts");
-   var pizzaToppings=document.getElementById("toppingstypes");
-
-   var sizes=["small", "medium", "large"];
-   var crusts=["crispy", "stuffed", "glutten-free"];
-   var toppingstypes=["Pepperoni", "Bacon", "Onions", "Pineapples"];
-
-   var crustStartPrice=50;
-   var toppingsStartPrice=100;
-
-   for(var i=0;i<sizes.length;i++) {
-       var size=sizes[i];
-       var el=document.createElement("option");
-       el.textContent=size;
-       el.value=i;
-       pizzaSizes.appendChild(el);
-   }
-   for(var i=0;i<crusts.length;i++) {
-       var crust=crusts[i];
-       var el=document.createElement("option");
-       el.textContent=crust;
-       el.value=crustStartPrice;
-       pizzaCrusts.appendChild(el);
-   }
-   for(var i=0;i<toppingstypes.length;i++) {
-       var topping=toppingstypes[i];
-       var el=document.createElement("option");
-       el.textContent=topping;
-       el.value=toppingsStartPrice;
-       pizzaToppings.appendChild(el);
-   }
-   
-
-   $('input[type=radio]').click(function() {
-       var deliveryAddressHolder = document.getElementById("deliveryAddressHolder")
-       if(this.id="deliveryselected")
-         if(this.value==="yes") {
-             deliveryPrice=200
-             deliveryAddressHolder.style.visibility='visible'
-             yesDelivery=true;
-             alert("Delivery charge" + deliveryPrice);
-
-         }else {
-             deliveryPrice=0
-             deliveryAddressHolder.style.visibility="hidden"
-             yesDelivery=false;
-         }
-   });
-
-   $("#checkout").click(function(event) {
-       event.preventDefault();
-       $("#checkout").hide();
-       $("#fullOrder").fadeIn();
-       $('#selectedSizeTd').html($("#sizes option:selected").text());
-       $("#selectedCrusts").html($("#crusts option:selected").text());
-       $("#selectedToppings").html($("#toppingstypes option:selected").text());
-       $("#number").html($("#numberOfPizzas").val());
-       $("#total").html($("#totalPrice").val());
-   });
-
-   function submitData () {
-      var selectedPizzaSize=parseInt(document.getElementById("sizes").value);
-      var selectedSize=$("#sizes option:selected").text();
-      var selectedCrustsPrice=parseInt(document.getElementById("crusts").value);
-      var selectedCrust=$("#crusts option:selected").text();
-      var selectedToppingPrice=parseInt(document.getElementById("toppingstypes").value);
-      var selectedTopping=$("#toppingstypes option:selected").text();
-      var numberOfPizzas=parseInt(document.getElementById("numberOfPizzas").value);
-      var deliveryAddress=document.getElementById("deliveryAddress").value;
-      var pizzaPrice=0;
-
-      if(selectedPizzaSize===0) {
-          selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,10)
-          selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,10)
-          pizzaPrice=pizzaStartPrice + increasePrice(pizzaStartPrice,10) + selectedCrustsPrice + selectedToppingPrice
-      }else if(selectedPizzaSize===1) {
-        selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,15)
-        selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,15)
-        pizzaPrice=pizzaStartPrice + increasePrice(pizzaStartPrice,15) + selectedCrustsPrice + selectedToppingPrice
-      }else if (selectedPizzaSize===2) {
-         selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,20)
-         selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,20)
-         pizzaPrice=pizzaStartPrice + increasePrice(pizzaStartPrice,15) + selectedCrustsPrice + selectedToppingPrice
-      }
-      
-      if(yesDelivery && numberOfPizzas > 0) {
-          pizzaPrice = (pizzaPrice*numberOfPizzas) + deliveryPrice
-      }else {
-          pizzaPrice=pizzaPrice*numberOfPizzas
-      }
-
-      var order=new order(selectedSize,selectedCrust,selectedCrustsPrice,selectedToppingPrice,selectedTopping,numberOfPizzas,pizzaPrice,deliveryPrice,deliveryAddress);
-
-      displayOrder(order)
-    }
-
-    //increased price by %
-    function increasePrice(price,percentage) {
-        return ((percentage/100)*price)
-    }
-
-    function Order (selectedSize,selectedCrust,selectedCrustsPrice,selectedToppingPrice,selectedTopping,numberOfPizzas,deliveryPrice,deliveryAddress,pizzaPrice) {
-        this.selectedSize=selectedSize;
-        this.selectedCrust=selectedCrust;
-        this.selectedCrustsPrice=selectedCrustsPrice;
-        this.selectedToppingPrice=selectedToppingPrice;
-        this.selectedTopping=selectedTopping;
-        this.numberOfPizzas=numberOfPizzas;
-        this.deliveryPrice=deliveryPrice;
-        this.deliveryAddress=deliveryAddress;
-        this.totalPrice=pizzaPrice;
-    }
-    function displayOrder(order) {
-        
-    }
+});
+$("#go").click(function (event) {
+    event.preventDefault();
+    alert("The delivery cost is Kshs 200 ");
+    // var a = total + 200;
+    var blanks = document.getElementById("location").value;
+    alert("Your order will include a delivery fee of 200 Ksh and will be delivered to" +" "+blanks);
+});
+$("#do").click(function (event) {
+    event.preventDefault();
+    var blanks = ["name", "phone_number", "location"];
+    var input = [];
+    blanks.forEach(function (blank) {
+        input.push($("#" + blank).val());
+    });
+    alert("Pizza Flake opposite Jafferys Sports Club Ground,Nairobi,Kenya");
+    $("#do").reset();
+});

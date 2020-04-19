@@ -236,218 +236,152 @@
  }
  #menu .menu {
      position: absolute;
-     top: 33%;
+     top: 30%;
      left:40%;
      font-weight: bold;
      font-family: sans-serif;
      font-size: 7mm;
      background-color: rgba(240, 128, 128, 0);
  }
- #menu .titlesize {
+ #menu .titleSize {
     position: fixed;
     top: 37%;
-    left:14%;
+    left:37%;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 5mm;
 }
  #menu .size {
     position: fixed;
-    top: 36.7%;
-    left:17%;
+    top: 37.0%;
+    left:40%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    size: 5mm;
 }
 #menu .crustt {
     position: fixed;
-    top: 37%;
-    left:50.5%;
+    top: 44%;
+    left:35.5%;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 5mm;
 }
-#menu .crust {
+#menu #formcrust {
     position: fixed;
-    top: 36.5%;
-    left:54.5%;
+    top: 44.5%;
+    left:40.5%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    size: 5mm;
 }
 #menu .toppings {
     position: fixed;
-    top: 42%;
-    left:28%;
+    top: 53%;
+    left:35%;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 5mm;
 }
-#menu .ltoppings {
+#menu #select-toppings {
     position: fixed;
-    top: 39.3%;
-    left:34%;
+    top: 53%;
+    left:40.5%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
-}
-#menu #toppingstypes {
-    position: fixed;
-    top: 45%;
-    left:30%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
+    size: 5mm;
 }
 #menu .quantity {
     position: fixed;
-    top: 49%;
-    left:16%;
+    top: 60.5%;
+    left:35%;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 5mm;
 }
 #menu .form {
     position: fixed;
-    top: 52%;
-    left:15%;
+    top: 60.5%;
+    left:41%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 7mm;
+    size: 5mm;
 } 
-#menu .delivery {
+#menu .addbutton{
     position: fixed;
-    top: 49.5%;
-    left:40%;
+    top: 61.5%;
+    left:46%;
+    font-weight: bold;
+    font-family: sans-serif;
+    size: 15mm;
+    font-size: 15mm;
+}
+#menu .order-center {
+    position: fixed;
+    top: 69%;
+    left:41.5%;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 6mm;
 }
-#menu #yesDelivery {
+#menu #list {
     position: fixed;
-    top: 53%;
-    left:38%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
-}#menu .choiceYes {
+    top:71%;
+    left:40%;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 6mm;
+    color: red;
+}
+#menu .yesDelivery {
     position: fixed;
-    top: 52.55%;
+    top: 80.55%;
     left:39%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    font-size: 4mm;
 }
-#menu #noDelivery {
+#menu .nameDetails {
     position: fixed;
-    top: 53%;
-    left:42%;
+    top: 85.5%;
+    left:27%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    size: 10mm;
     color: black;
 }
-#menu .choiceNo {
+#menu .numberDetails {
     position: fixed;
-    top: 52.55%;
-    left:43%;
+    top: 85.5%;
+    left:38%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    size: 10mm;
     color: black;
 }
-#menu .choiceNo {
+#menu .locationDetails {
     position: fixed;
-    top: 52.55%;
-    left:43%;
+    top: 85.5%;
+    left:49%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
+    size: 10mm;
     color: black;
 }
-#menu .addressHolder {
+#menu .acceptDelivery {
     position: fixed;
-    top: 56.55%;
+    top: 90.55%;
     left:37%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
+    size: 8mm;
 }
-#menu #deliveryAddress {
+#menu .denyDelivery {
     position: fixed;
-    top: 59.55%;
-    left:35%;
+    top: 90.55%;
+    left:45%;
     font-weight: bold;
     font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
-}
-#menu .totalPrice {
-    position: fixed;
-    top: 63.55%;
-    left:40%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
-}
-#menu #totalPrice {
-    position: fixed;
-    top: 66.55%;
-    left:35.5%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
-}
-#menu #submit {
-    position: fixed;
-    top: 70.15%;
-    left:35.5%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
-}#menu #checkout {
-    position: fixed;
-    top: 70.15%;
-    left:43%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5mm;
-    color: black;
-}
-#menu .tableOrder {
-    position: fixed;
-    top: 74.55%;
-    left:37%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 7mm;
-    color: black;
-}
-#menu .scope  {
-    position: fixed;
-    top: 77.55%;
-    left:34%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 5.5mm;
-    color: black;
-}
-#menu .th  {
-    color: white;
-}
-#menu #fullOrder {
-    visibility: hidden;
-    display: none;
-}
-#menu #info {
-    position: fixed;
-    top: 87.5%;
-    left:32%;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 6mm;
+    size: 8mm;
+    background-color: yellow;
 }
