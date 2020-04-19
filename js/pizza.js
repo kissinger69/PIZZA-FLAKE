@@ -88,8 +88,39 @@ document.addEventListener('DOMContentLoaded',function() {
         selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,15)
         selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,15)
         pizzaPrice=pizzaStartPrice + increasePrice(pizzaStartPrice,15) + selectedCrustsPrice + selectedToppingPrice
-      }else if (selectedPizzaSize===1) {
-         selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,15)
-         selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,15)
+      }else if (selectedPizzaSize===2) {
+         selectedCrustsPrice=selectedCrustsPrice + increasePrice(selectedCrustsPrice,20)
+         selectedToppingPrice=selectedToppingPrice + increasePrice(selectedToppingPrice,20)
          pizzaPrice=pizzaStartPrice + increasePrice(pizzaStartPrice,15) + selectedCrustsPrice + selectedToppingPrice
+      }
+      
+      if(yesDelivery && numberOfPizzas > 0) {
+          pizzaPrice = (pizzaPrice*numberOfPizzas) + deliveryPrice
+      }else {
+          pizzaPrice=pizzaPrice*numberOfPizzas
+      }
 
+      var order=new order(selectedSize,selectedCrust,selectedCrustsPrice,selectedToppingPrice,selectedTopping,numberOfPizzas,pizzaPrice,deliveryPrice,deliveryAddress);
+
+      displayOrder(order)
+    }
+
+    //increased price by %
+    function increasePrice(price,percentage) {
+        return ((percentage/100)*price)
+    }
+
+    function Order (selectedSize,selectedCrust,selectedCrustsPrice,selectedToppingPrice,selectedTopping,numberOfPizzas,deliveryPrice,deliveryAddress,pizzaPrice) {
+        this.selectedSize=selectedSize;
+        this.selectedCrust=selectedCrust;
+        this.selectedCrustsPrice=selectedCrustsPrice;
+        this.selectedToppingPrice=selectedToppingPrice;
+        this.selectedTopping=selectedTopping;
+        this.numberOfPizzas=numberOfPizzas;
+        this.deliveryPrice=deliveryPrice;
+        this.deliveryAddress=deliveryAddress;
+        this.totalPrice=pizzaPrice;
+    }
+    function displayOrder(order) {
+        
+    }
