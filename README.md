@@ -6,7 +6,7 @@ It is a website that allows you to order pizza online of various sizes and also 
 ## Setup/Installation Requirements
 Good internet connection is higly recommended.
 
-Access the website through this live link:
+Access the website through this live link: https://kissinger69.github.io/PIZZA-FLAKE/
 ## Known Bugs
 As per now there are no bugs.
 
