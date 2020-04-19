@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="size">
-                    <select class="form-control" name="size" required>
+                    <select id="sizes" name="size" required>
                         <option value="---">---</option>
                         <option value="small">Small @ 300Ksh</option>
                         <option value="medium">Medium @500ksh</option>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="crust">
-                    <select class="form-control" name="crust" required>
+                    <select id="crusts" name="crust" required>
                         <option value="---" id="null">---</option>
                         <option value="crispy" id="crispy">Crispy @100ksh</option>
                         <option value="stuffed" id="stuffed">Stuffed @ 200ksh</option>
@@ -91,7 +91,7 @@
                         <li>For Small @50</li>
                     </ul>
                 </div>
-                <div class="toppingstypes">
+                <div id="toppingstypes">
                  <label class="container">Pepperoni
                      <input type="checkbox" checked="checked">
                      <span class="checkmark"></span>
@@ -112,7 +112,8 @@
                 <div class="row">
                     <div class="col-sm-3 color">
                       <div class="quantity">
-                        <label>QUANTITY</label>
+                        <label for="numberOfPizzas">QUANTITY</label>
+                        <input type="number" id="numberOfPizzas" value=0 min="1" required>
                     </div>
 
                     <div class="form">
@@ -150,7 +151,7 @@
                                   </tr>
                                 </th>
                                 <tbody>
-                                    <tr>
+                                    <tr class="th">
                                       <td id="selectedSizeTd"></td>
                                       <td id="selectedCrusts"></td>
                                       <td id="selectedToppings"></td>
