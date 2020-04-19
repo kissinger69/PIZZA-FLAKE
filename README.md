@@ -4,11 +4,13 @@
 ## Description
 It is a website that allows you to order pizza online of various sizes and also choose your own crust or topping(s).Delivery is also done.
 ## Setup/Installation Requirements
-Good internet connection is higly recommended.
-Access the website through this live link:
+*Good internet connection is higly recommended.
+
+*Access the website through this live link:
 ## Known Bugs
-As per now there are no bugs.
-Although,if you run into any bugs,feel free to communicate to me through my gmail:kissyoa69@gmail.com
+*As per now there are no bugs.
+
+*Although,if you run into any bugs,feel free to communicate to me through my gmail:kissyoa69@gmail.com
 ## Technologies Used
 I used HTML,CSS and JAVASCRIPT alongside JQuery.
 ## Support and contact details
