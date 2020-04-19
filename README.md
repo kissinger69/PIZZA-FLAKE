@@ -17,5 +17,5 @@ I used HTML,CSS and JAVASCRIPT alongside JQuery.
 Let us help make the world a better place by improving it.
 
 Hence for any ideas,problems,concerns or questions,feel free to contact me using my gmail account:kissyoa69@gmail.com
-### License [https://github.com/kissinger69/PIZZA-FLAKE/blob/master/LICENSE]
+### License https://github.com/kissinger69/PIZZA-FLAKE/blob/master/LICENSE
 Copyright (c) 2020 **Helen Yoa Kissinger**
