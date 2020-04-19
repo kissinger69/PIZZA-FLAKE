@@ -1,10 +1,15 @@
+ @media only screen and (max-width:500px) {
+     .vertical {
+         display: none;
+     }
+ }
  * {
       margin:0%;
       font-family: sans-serif;
       padding: 0%;
   }
   #index header {
-      background-image: url(../pix4.jpg);
+      background-image: url(../assets/background/pix4.jpg);
       background-size: cover;
       height:100vh;
       background-position: center;
@@ -73,7 +78,7 @@
      color: green;
  }
  #aboutus {
-      background-image: url(../pizza.jpg);
+      background-image: url(../assets/background/pizza.jpg);
       background-size: cover;
       height:100vh;
       background-position: center;
@@ -101,10 +106,13 @@
      font-size: 10mm;
  }
  #menu {
-     background-color:rgb(110, 103, 103)
+    background-image: url(../assets/background/menu.jpg);
+    background-size: cover;
+    height:100vh;
+    background-position: center;
  }
  #contact {
-    background-image: url(../pix3.webp);
+    background-image: url(../assets/background/pix3.webp);
       background-size: cover;
       height:100vh;
       background-position: center;

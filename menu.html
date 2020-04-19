@@ -53,6 +53,7 @@
             </div>
             <div class="col-sm-3">
                 <select class="size" name="size" required>
+                    <option value="---">---</option>
                     <option value="small">Small @ 300 Ksh</option>
                     <option value="medium">Medium @ 500 Ksh</option>
                     <option value="large">Large @ 900 Ksh</option>
@@ -67,6 +68,7 @@
             </div>
             <div class="col-sm-3">
                 <select class="form-control" id=formcrust name="crust" required>
+                    <option value="---">---</option>
                     <option value="cripsy" id="cripsy"> Cripsy @ 100 Ksh</option>
                     <option value="stuffed" id="stuffe">Stuffed @ 200 Ksh </option>
                     <option value="glutten-free" id="glutten-free">Glutten-free @ 300 Ksh</option>
@@ -108,9 +110,7 @@
             </form>
         </div>
     
-        
             <div class="container">
-    
             <div class="order" id="orders">
                 <h1 class="order-center" id="pizzadd">Order Summary</h1>
     
@@ -133,10 +133,10 @@
                             <input type="text" class="locationDetails" id="location" placeholder="Enter the location: "
                                 required><br><br>
                                 <div class="acceptDelivery">
-                            <button class="btn bg-info text-center d-block mx-auto go" id="go" type="submit">Make Delivery</button>
+                            <button class="btn bg-info text-center d-block mx-auto go" id="deliver" type="submit">Make Delivery</button>
                           </div>
                                 <div class="denyDelivery">
-                            <button class="bnt bg-info text-center d-block mx-auto go" id="do" type="button">Pick Up</button>
+                            <button class="bnt bg-info text-center d-block mx-auto go" id="pick" type="button">Pick Up</button>
                             </div>
                         </form>
                     </div>

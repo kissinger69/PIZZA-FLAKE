@@ -64,20 +64,20 @@ $("#btn-add-to-cart").click(function (e) {
     $("#list").append(orderItem);
 })
 });
-$("#go").click(function (event) {
+$("#deliver").click(function (event) {
     event.preventDefault();
     alert("The delivery cost is Kshs 200 ");
-    // var a = total + 200;
+
     var blanks = document.getElementById("location").value;
     alert("Your order will include a delivery fee of 200 Ksh and will be delivered to" +" "+blanks);
 });
-$("#do").click(function (event) {
+$("#pick").click(function (event) {
     event.preventDefault();
     var blanks = ["name", "phone_number", "location"];
     var input = [];
     blanks.forEach(function (blank) {
         input.push($("#" + blank).val());
     });
-    alert("Pizza Flake opposite Jafferys Sports Club Ground,Nairobi,Kenya");
-    $("#do").reset();
+    alert("Please pick your order at Pizza Flake opposite Jafferys Sports Club Ground,Nairobi,Kenya");
+    $("#pick").reset();
 });
